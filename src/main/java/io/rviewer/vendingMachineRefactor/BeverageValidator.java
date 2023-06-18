@@ -2,6 +2,9 @@ package io.rviewer.vendingMachineRefactor;
 
 public class BeverageValidator {
 
+    final static int MIN_SUGAR = 0;
+    final static int MAX_SUGAR = 2;
+
     BeverageMessage msg;
     Beverage[] beverages;
     Beverage beverage;
@@ -19,17 +22,17 @@ public class BeverageValidator {
 
     public boolean isValid() throws BeverageException {
         if (!beverageValidator()){
-            throw new BeverageException(this.msg.getTypeError(this.beverages));
+            throw new BeverageException(this.msg.getBeverageError(this.beverages));
         }
 
         this.beverage = Beverage.valueOf(this.drinkType);
 
         if (!priceValidator()){
-            throw new BeverageException(this.msg.getBeverageError(this.beverage));
+            throw new BeverageException(this.msg.getPriceError(this.beverage));
         }
 
-        if (this.sugar < 0 || this.sugar > 2){
-            throw new BeverageException(this.msg.getSugarError());
+        if (!sugarValidator()){
+            throw new BeverageException(this.msg.getSugarError(MIN_SUGAR, MAX_SUGAR));
         }
 
         return true;
@@ -44,7 +47,14 @@ public class BeverageValidator {
         return false;
     }
 
-    private boolean priceValidator() throws BeverageException {
+    private boolean priceValidator(){
         return  this.money  >= this.beverage.getPrice();
+    }
+
+    private boolean sugarValidator(){
+        if (this.sugar < MIN_SUGAR || this.sugar > MAX_SUGAR){
+            return false;
+        }
+        return true;
     }
 }

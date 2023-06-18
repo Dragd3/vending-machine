@@ -28,7 +28,7 @@ public class MakeDrinkCommandTest {
     public void testCoffeeMachineReturnsExpectedOutputForCoffeeCombinations(
             Input input, String expectedMessage
     ) {
-        new MakeDrinkCommandOld().execute(input, output);
+        new MakeDrinkCommand().execute(input, output);
 
         verify(output, times(1)).run(expectedMessage);
     }

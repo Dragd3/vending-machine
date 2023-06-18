@@ -1,9 +1,9 @@
 package io.rviewer.vendingMachineRefactor;
 
 public enum Beverage {
-    COFFEE ("Coffee",0.5f, 0),
-    TEA ("Tea",0.4f, 0),
-    CHOCOLATE ("Chocolate",0.6f, 0);
+    TEA ("tea",0.4f, 0),
+    COFFEE ("coffee",0.5f, 0),
+    CHOCOLATE ("chocolate",0.6f, 0);
 
     private String name;
     private float price;

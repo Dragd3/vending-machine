@@ -9,7 +9,7 @@ public class BeverageMessage {
     public BeverageMessage() {
     }
 
-    public String getTypeError(Beverage[] beverages){
+    public String getBeverageError(Beverage[] beverages){
         StringBuilder response = new StringBuilder();
 
         String listOfBeverages = Stream.of(beverages)
@@ -33,7 +33,7 @@ public class BeverageMessage {
         return response.toString();
     }
 
-    public String getBeverageError(Beverage beverage){
+    public String getPriceError(Beverage beverage){
         StringBuilder response = new StringBuilder();
 
         response.append("The ")
@@ -45,8 +45,16 @@ public class BeverageMessage {
         return response.toString();
     }
 
-    public String getSugarError(){
-        return "The number of sugars should be between 0 and 2.";
+    public String getSugarError(int min, int max){
+        StringBuilder response = new StringBuilder();
+
+        response.append("The number of sugars should be between ")
+                .append(min)
+                .append(" and ")
+                .append(max)
+                .append(".");
+
+        return response.toString();
     }
 
     public String getResponse(Beverage beverage, int sugar, boolean hot){
@@ -54,14 +62,11 @@ public class BeverageMessage {
 
         response.append("You have ordered a ")
                 .append(beverage.getName())
-                .append(hot ? " extra hot" : "");
-
-        if (sugar != 0){
-            response.append(" with ")
-                    .append(sugar)
-                    .append(sugar == 1 ? " sugar" : " sugars")
-                    .append(" (stick included)");
-        }
+                .append(hot ? " extra hot" : "")
+                .append(" with ")
+                .append(sugar)
+                .append(" sugar")
+                .append(sugar > 0 ? "s (stick included)" : "");
 
         return response.toString();
     }
