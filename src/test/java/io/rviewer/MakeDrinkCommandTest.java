@@ -1,9 +1,5 @@
 package io.rviewer;
 
-import io.rviewer.Input;
-import io.rviewer.InputArguments;
-import io.rviewer.MakeDrinkCommand;
-import io.rviewer.Output;
 import com.tngtech.java.junit.dataprovider.DataProvider;
 import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
@@ -32,7 +28,7 @@ public class MakeDrinkCommandTest {
     public void testCoffeeMachineReturnsExpectedOutputForCoffeeCombinations(
             Input input, String expectedMessage
     ) {
-        new MakeDrinkCommand().execute(input, output);
+        new MakeDrinkCommandOld().execute(input, output);
 
         verify(output, times(1)).run(expectedMessage);
     }

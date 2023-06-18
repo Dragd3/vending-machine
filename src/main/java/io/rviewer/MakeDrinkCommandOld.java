@@ -2,7 +2,7 @@ package io.rviewer;
 
 import java.util.Arrays;
 
-public class MakeDrinkCommand implements Command {
+public class MakeDrinkCommandOld implements Command {
 
   @Override
   public void execute(Input input, Output out) {
