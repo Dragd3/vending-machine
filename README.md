@@ -87,11 +87,11 @@ so that I could know how much money the machine made with each type of drink.
 
 It shows something like the following table:
 
-	  Drink|Money
-		Tea|15
-	 Coffee|25.75
-  Chocolate|36
-
+|Drink|Money|
+|---|---|
+|Tea|15|
+|Coffee|25.75|
+|Chocolate|36|
 
 ## Project set up
 
