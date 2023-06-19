@@ -61,41 +61,36 @@ You have ordered a coffee extra hot with 2 sugars (stick included)
 
 This application was implemented by a developer who is no longer in the company.
 
-His legacy is the class `MakeDrinkCommand`. This class handle all the application logic:
+His legacy is the class `MakeDrinkCommandOld`. This class handle all the application logic:
 * It reads input parameters
 * It validates input parameters
 * It shows output message
 
 He also implemented a unit test covering all possibilities (`MakeDrinkCommandTest`)
 
-As you can see, this class is a bit messy and we need to adapt it to our coding standards
-so that we can create a Merge Request and merge it into master
+As you can see, this class is a bit messy and I adapted to my coding standards
 
-## What do you have to do?
+## What I have done?
 
-We would like to have a reusable, maintainable and testable code, so we want to refactor
-this `MakeDrinkCommand` following these principles:
+I liked to have a reusable, maintainable and testable code, so I refactored
+into `MakeDrinkCommand` following these principles:
 
 * Clean code
 * SOLID principles
 * Decoupling
 * Design patterns
 * Error handling
-* Unit testing
 * TDD
 
-You don't have to implement them all, but make the code better to be more comfortable with it.
+Also, I prepared the code for the implementation of a new feature
+so that I could know how much money the machine made with each type of drink.
 
-Also, if there is time, our Product Owner has asked us to implement a new feature
-so that we could know how much money we have earned with each type of drink.
+IT shows something like the following table:
 
-Something like the following table would be great:
-
-|Drink|Money|
-|---|---|
-|Tea|15|
-|Coffee|25.75|
-|Chocolate|36|
+    Drink|Money
+      Tea|15
+   Coffee|25.75
+Chocolate|36
 
 ## Project set up
 
@@ -116,15 +111,3 @@ Run tests
 ```
 ./gradlew test
 ```
-
----
-
-## How to submit your solution
-
-* Push your code to the `devel` branch - we encourage you to commit regularly to show your thinking process was.
-* **Create a new Pull Request** to `main` branch & **merge it**.
-
-Once merged you **won't be able to change or add** anything to your solution, so double-check that everything is as
-you expected!
-
-Remember that **there is no countdown**, so take your time and implement a solution that you are proud!
