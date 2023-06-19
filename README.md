@@ -85,12 +85,13 @@ into `MakeDrinkCommand` following these principles:
 Also, I prepared the code for the implementation of a new feature
 so that I could know how much money the machine made with each type of drink.
 
-IT shows something like the following table:
+It shows something like the following table:
 
-    Drink|Money
-      Tea|15
-   Coffee|25.75
-Chocolate|36
+	  Drink|Money
+		Tea|15
+	 Coffee|25.75
+  Chocolate|36
+
 
 ## Project set up
 
