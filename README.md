@@ -57,7 +57,7 @@ You have ordered a coffee with 2 sugars (stick included).
 You have ordered a coffee extra hot with 2 sugars (stick included)    
 ```
 
-## Current status
+## Legacy status
 
 This application was implemented by a developer who is no longer in the company.
 
@@ -70,7 +70,7 @@ He also implemented a unit test covering all possibilities (`MakeDrinkCommandTes
 
 As you can see, this class is a bit messy and I adapted to my coding standards
 
-## What I have done?
+## Current status / What have I done?
 
 I liked to have a reusable, maintainable and testable code, so I refactored
 into `MakeDrinkCommand` following these principles:
